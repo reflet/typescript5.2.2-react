@@ -1,6 +1,6 @@
 services:
   node:
-    image: 'learning/typescript5.2.2-react:local'
+    image: 'learning/typescript5.9.3-vite-react:local'
     build:
       context: ./
       dockerfile: ./docker/node/Dockerfile
@@ -8,7 +8,7 @@ services:
     working_dir: /usr/src/app
     volumes:
       - ./src:/usr/src/app
-      #- node_modules:/usr/src/app/node_modules/
+      - node_modules:/usr/src/app/node_modules/
     ports:
       - '5173:5173'
 

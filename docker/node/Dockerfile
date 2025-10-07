@@ -7,8 +7,8 @@ WORKDIR /usr/src/app
 COPY ./src/ /usr/src/app
 
 # Install application dependencies.
-#RUN npm install
+RUN npm install
 
 # start react.js.
 # ※ docker環境の場合、--hostのオプションが必要となる
-#CMD ["npm", "run", "dev", "--", "--host"]
+CMD ["npm", "run", "dev", "--", "--host"]
