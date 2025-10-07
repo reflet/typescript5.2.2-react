@@ -1,0 +1,17 @@
+services:
+  node:
+    image: 'learning/typescript5.2.2-react:local'
+    build:
+      context: ./
+      dockerfile: ./docker/node/Dockerfile
+    tty: true
+    working_dir: /usr/src/app
+    volumes:
+      - ./src:/usr/src/app
+      #- node_modules:/usr/src/app/node_modules/
+    ports:
+      - '5173:5173'
+
+volumes:
+  node_modules:
+    driver: local
